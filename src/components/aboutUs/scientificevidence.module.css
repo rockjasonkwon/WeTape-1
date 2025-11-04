@@ -1,0 +1,452 @@
+.redBanner {
+  background-color: #db2a1ae6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bannerTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.contentSection {
+  background-color: white;
+  padding: 80px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.caseReportLabel {
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #db291a;
+  margin: 0;
+}
+
+.experimentalLabel {
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #db291a;
+  margin: 0;
+}
+
+.mainTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2a2322;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.highlightBox {
+  background-color: #db2a1ae6;
+  padding: 30px 40px;
+  margin: 20px 0;
+  position: relative;
+  margin-left: calc(-100vw + 100%);
+  padding-left: calc(100vw - 100% + 30px);
+}
+
+.highlightText {
+  font-family: "Lato", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: -1%;
+}
+
+.authorInfo {
+  margin-top: 20px;
+}
+
+.authorName {
+  color: #db2a1ae6;
+  font-weight: 700;
+}
+
+.authorText {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin: 0 0 15px 0;
+  line-height: 1.6;
+}
+
+.publicationDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.detailItem {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+}
+
+.footnote {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footnoteHighlight {
+  color: #db2a1ae6;
+  font-weight: 700;
+}
+
+.rightColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.chartImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Journal and Publication History Section */
+.historySection {
+  background-color: white;
+  padding: 80px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.historyTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #DB291A;
+  line-height: 80px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.journalImage {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.buttonSection {
+  margin-top: 230px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.evidenceButton {
+  background-color: #db2a1ae6;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(219, 42, 26, 0.3);
+}
+
+.evidenceButton:hover {
+  background-color: #c0241a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(219, 42, 26, 0.4);
+}
+
+.evidenceButton:active {
+  transform: translateY(0);
+}
+
+.arrow {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+  .redBanner {
+    padding: 30px 20px 30px 40px;
+  }
+
+  .bannerTitle {
+    font-size: 60px;
+  }
+
+  .contentSection {
+    padding: 60px 0;
+  }
+
+  .mainContent {
+    gap: 50px;
+    padding: 0 40px;
+  }
+
+  .highlightBox {
+    margin-left: -40px;
+    padding-left: 40px;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .highlightText {
+    font-size: 20px;
+  }
+
+  .authorText {
+    font-size: 16px;
+  }
+
+  .historySection {
+    padding: 60px 40px;
+  }
+
+  .historyTitle {
+    font-size: 26px;
+    line-height: 60px;
+    margin-bottom: 30px;
+  }
+
+  .journalImage {
+    max-width: 100%;
+  }
+
+  .buttonSection {
+    margin-top: 180px;
+    padding: 0 20px;
+  }
+
+  .evidenceButton {
+    font-size: 20px;
+    padding: 18px 40px;
+  }
+
+  .arrow {
+    font-size: 24px;
+  }
+}
+
+/* Mobile responsiveness (up to 768px) */
+@media (max-width: 768px) {
+  .redBanner {
+    padding: 25px 20px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .contentSection {
+    padding: 40px 0;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .highlightBox {
+    padding: 20px 25px;
+    margin-left: -20px;
+    padding-left: 25px;
+  }
+
+  .caseReportLabel,
+  .experimentalLabel {
+    font-size: 20px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .highlightText {
+    font-size: 18px;
+  }
+
+  .authorText {
+    font-size: 15px;
+  }
+
+  .detailItem {
+    font-size: 14px;
+  }
+
+  .historySection {
+    padding: 40px 20px;
+  }
+
+  .historyTitle {
+    font-size: 22px;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+
+  .journalImage {
+    max-width: 100%;
+  }
+
+  .buttonSection {
+    margin-top: 120px;
+    padding: 0 15px;
+  }
+
+  .evidenceButton {
+    font-size: 18px;
+    padding: 16px 35px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .redBanner {
+    padding: 20px 15px;
+  }
+
+  .bannerTitle {
+    font-size: 32px;
+  }
+
+  .contentSection {
+    padding: 30px 0;
+  }
+
+  .mainContent {
+    padding: 0 15px;
+  }
+
+  .highlightBox {
+    padding: 15px 20px;
+    margin-left: -15px;
+    padding-left: 20px;
+  }
+
+  .caseReportLabel,
+  .experimentalLabel {
+    font-size: 18px;
+  }
+
+  .mainTitle {
+    font-size: 20px;
+  }
+
+  .highlightText {
+    font-size: 16px;
+  }
+
+  .authorText {
+    font-size: 14px;
+  }
+
+  .detailItem {
+    font-size: 13px;
+  }
+
+  .footnote {
+    font-size: 12px;
+  }
+
+  .historySection {
+    padding: 30px 15px;
+  }
+
+  .historyTitle {
+    font-size: 18px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .journalImage {
+    max-width: 100%;
+  }
+
+  .buttonSection {
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+
+  .evidenceButton {
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+
+  .arrow {
+    font-size: 18px;
+  }
+}

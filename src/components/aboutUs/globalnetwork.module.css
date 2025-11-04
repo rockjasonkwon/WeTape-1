@@ -1,0 +1,111 @@
+.redBanner {
+  background-color: #db2a1ae6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bannerTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.bannerSubtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  text-align: right;
+  line-height: 1.3;
+}
+
+.heroImage {
+  width: 100%;
+  height: 1039px;
+  background-image: url("/assets/about/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+  .redBanner {
+    padding: 30px 20px 30px 40px;
+  }
+
+  .bannerTitle {
+    font-size: 60px;
+  }
+
+  .bannerSubtitle {
+    font-size: 28px;
+  }
+
+  .heroImage {
+    height: 700px;
+  }
+}
+
+/* Mobile responsiveness (up to 768px) */
+@media (max-width: 768px) {
+  .redBanner {
+    padding: 25px 20px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .bannerSubtitle {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .heroImage {
+    height: 400px;
+    background-image: url("/assets/about/mobile/map.png");
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .redBanner {
+    padding: 20px 15px;
+  }
+
+  .bannerTitle {
+    font-size: 32px;
+  }
+
+  .bannerSubtitle {
+    font-size: 18px;
+  }
+
+  .heroImage {
+    height: 400px;
+    background-size: cover;
+  }
+}

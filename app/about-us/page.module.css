@@ -1,0 +1,258 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.redBanner {
+  background-color: #db2a1ae6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bannerTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.bannerSubtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  text-align: right;
+  line-height: 1.3;
+}
+
+.heroImage {
+  width: 100%;
+  height: 600px;
+  background-image: url("/assets/about/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.infoSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 80px;
+  margin-bottom: 80px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoCard:last-child {
+  grid-column: 1 / -1;
+  max-width: 50%;
+}
+
+.cardTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  color: #2a2322;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cardText {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #2a2322;
+  margin: 0;
+}
+
+.certificationLogos {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.logoLarge {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoSmall {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contentSection {
+  max-width: 900px;
+}
+
+.contentSection h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2a2322;
+  margin-bottom: 30px;
+}
+
+.contentSection p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .redBanner {
+    padding: 40px 50px;
+  }
+
+  .bannerTitle {
+    font-size: 60px;
+  }
+
+  .bannerSubtitle {
+    font-size: 28px;
+  }
+
+  .heroImage {
+    height: 500px;
+  }
+
+  .infoSection {
+    padding: 60px 50px;
+  }
+
+  .infoGrid {
+    gap: 40px 60px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .logoLarge {
+    height: 70px;
+  }
+
+  .logoSmall {
+    height: 55px;
+  }
+
+  .mainContent {
+    padding: 60px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .redBanner {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+  }
+
+  .bannerSubtitle {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .heroImage {
+    height: 400px;
+    background-image: url("/assets/about/mobile/wetape.png");
+  }
+
+  .infoSection {
+    padding: 40px 30px;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .infoCard:last-child {
+    max-width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardText {
+    font-size: 14px;
+  }
+
+  .certificationLogos {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: nowrap;
+  }
+
+  .logoLarge {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .logoSmall {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+  }
+
+  .mainContent {
+    padding: 40px 30px;
+  }
+
+  .contentSection h2 {
+    font-size: 28px;
+  }
+
+  .contentSection p {
+    font-size: 16px;
+  }
+}

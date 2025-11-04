@@ -1,0 +1,56 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 80px;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #e53935;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.content p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 40px 30px;
+  }
+
+  .pageTitle {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}

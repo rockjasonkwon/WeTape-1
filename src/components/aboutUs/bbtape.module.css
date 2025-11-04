@@ -1,0 +1,255 @@
+.redBanner {
+  background-color: #db2a1ae6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bannerTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.descriptionSection {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.description {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.featuresSection {
+  background-color: white;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.circularDiagram {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: url("/assets/about/circle.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bottomSection {
+  background-color: white;
+  padding: 60px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.textContent {
+  padding-top: 40px;
+}
+
+.sectionTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+}
+
+.sectionText {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.imageWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.subImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.subImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+  .redBanner {
+    padding: 30px 20px 30px 40px;
+  }
+
+  .bannerTitle {
+    font-size: 60px;
+  }
+
+  .description {
+    font-size: 24px;
+  }
+
+  .circularDiagram {
+    height: 600px;
+  }
+
+  .bottomSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 30px 60px;
+  }
+
+  .sectionTitle {
+    font-size: 30px;
+  }
+
+  .sectionText {
+    font-size: 16px;
+  }
+}
+
+/* Mobile responsiveness (up to 768px) */
+@media (max-width: 768px) {
+  .redBanner {
+    padding: 25px 20px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .descriptionSection {
+    padding: 40px 20px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .featuresSection {
+    padding: 40px 20px;
+  }
+
+  .circularDiagram {
+    height: 400px;
+  }
+
+  .bottomSection {
+    padding: 30px 20px 40px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .textContent {
+    padding-top: 0;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionText {
+    font-size: 15px;
+  }
+
+  .subImages {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .redBanner {
+    padding: 20px 15px;
+  }
+
+  .bannerTitle {
+    font-size: 32px;
+  }
+
+  .descriptionSection {
+    padding: 30px 15px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .featuresSection {
+    padding: 30px 15px;
+  }
+
+  .circularDiagram {
+    height: 300px;
+  }
+
+  .bottomSection {
+    padding: 20px 15px 30px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionText {
+    font-size: 14px;
+  }
+}

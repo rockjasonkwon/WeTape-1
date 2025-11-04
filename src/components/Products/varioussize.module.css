@@ -1,0 +1,203 @@
+.redBanner {
+  background-color: #db2a1ae6;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 10px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bannerTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.contentSection {
+  background-color: white;
+  padding: 0;
+  position: relative;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 60px;
+}
+
+.infoBlock {
+  border-left: 4px solid #db2a1ae6;
+  padding-left: 20px;
+}
+
+.infoTitle {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #db2a1ae6;
+  margin: 0 0 15px 0;
+}
+
+.infoText {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.additionalImageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 33px;
+  margin-bottom: 200px;
+}
+
+.additionalImage {
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+  .redBanner {
+    padding: 30px 20px 30px 40px;
+  }
+
+  .bannerTitle {
+    font-size: 60px;
+  }
+
+  .mainContent {
+    gap: 0;
+  }
+
+  .infoColumn {
+    padding: 60px 40px;
+  }
+
+  .infoTitle {
+    font-size: 24px;
+  }
+
+  .infoText {
+    font-size: 16px;
+  }
+
+  .additionalImageSection {
+    margin-top: 25px;
+    margin-bottom: 160px;
+  }
+}
+
+/* Mobile responsiveness (up to 768px) */
+@media (max-width: 768px) {
+  .redBanner {
+    padding: 25px 20px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .productImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .infoColumn {
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .infoTitle {
+    font-size: 22px;
+  }
+
+  .infoText {
+    font-size: 15px;
+  }
+
+  .additionalImageSection {
+    margin-top: 20px;
+    margin-bottom: 120px;
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .redBanner {
+    padding: 20px 15px;
+  }
+
+  .bannerTitle {
+    font-size: 32px;
+  }
+
+  .infoColumn {
+    gap: 25px;
+    padding: 30px 15px;
+  }
+
+  .infoTitle {
+    font-size: 20px;
+  }
+
+  .infoText {
+    font-size: 14px;
+  }
+
+  .additionalImageSection {
+    margin-top: 15px;
+    margin-bottom: 80px;
+  }
+}

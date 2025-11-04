@@ -1,0 +1,217 @@
+.container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 40px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 879px;
+  background-image: url("/assets/guides/guidesBack.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 240px;
+  background-color: rgba(42, 35, 34, 0.9);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.title {
+  font-family: "Lato", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.text {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
+}
+
+.furtherButton {
+  background-color: rgba(42, 35, 34, 0.9);
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.furtherButton:hover {
+  background-color: rgba(42, 35, 34, 1);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.useCaseImageSection {
+  width: 100%;
+  margin-top: 160px;
+  margin-bottom: 160px;
+}
+
+.useCaseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tablet responsiveness (768px - 1024px) */
+@media (max-width: 1024px) {
+  .backgroundImage {
+    height: 500px;
+  }
+
+  .contentWrapper {
+    padding: 50px 40px;
+  }
+
+  .title {
+    font-size: 60px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .furtherButton {
+    font-size: 18px;
+    padding: 16px 35px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 50px;
+  }
+
+  .useCaseImageSection {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}
+
+/* Mobile responsiveness (up to 768px) */
+@media (max-width: 768px) {
+  .backgroundImage {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .contentWrapper {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .rightSection {
+    justify-content: flex-start;
+  }
+
+  .text {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .furtherButton {
+    font-size: 16px;
+    padding: 14px 30px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 40px;
+  }
+
+  .useCaseImageSection {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+/* Small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .backgroundImage {
+    min-height: 450px;
+  }
+
+  .contentWrapper {
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .furtherButton {
+    font-size: 14px;
+    padding: 12px 25px;
+    gap: 10px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    padding-bottom: 30px;
+  }
+
+  .useCaseImageSection {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
