@@ -33,35 +33,35 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
   z-index: 1003;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   position: relative;
 }
 
 .hamburgerLine {
-  width: 34px;
-  height: 3px;
-  background-color: #FFFFFF;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
   transition: all 0.3s ease;
   position: absolute;
 }
 
 .hamburgerLine:nth-child(1) {
-  top: 10px;
+  top: 8px;
 }
 
 .hamburgerLine:nth-child(2) {
-  top: 18px;
+  top: 16px;
 }
 
 .hamburgerLine:nth-child(3) {
-  top: 26px;
+  top: 24px;
 }
 
 /* Hamburger animation to X */
@@ -71,7 +71,7 @@
 
 .hamburger.open .hamburgerLine:nth-child(1) {
   transform: rotate(45deg);
-  top: 18px;
+  top: 16px;
 }
 
 .hamburger.open .hamburgerLine:nth-child(2) {
@@ -80,7 +80,7 @@
 
 .hamburger.open .hamburgerLine:nth-child(3) {
   transform: rotate(-45deg);
-  top: 18px;
+  top: 16px;
 }
 
 .navList {
@@ -153,9 +153,9 @@
 
 .navLink {
   font-family: "Lato", sans-serif;
-  color: #2a2322;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: -0.5%;
   transition: color 0.3s ease;

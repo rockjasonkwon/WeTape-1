@@ -2,12 +2,14 @@
   background-color: #db2a1ae6;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 10px 40px 80px;
+  padding: 40px 0;
   position: relative;
   z-index: 1;
 }
 
 .bannerContent {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,7 +57,7 @@
   background-color: #db2a1ae6;
   color: white;
   font-family: "Lato", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
   padding: 20px 50px;
   border: none;
@@ -66,7 +68,6 @@
   gap: 15px;
   transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(219, 42, 26, 0.3);
 }
 
 .registerButton:hover {
@@ -80,11 +81,11 @@
 }
 
 .arrow {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 48px !important;
+  display: flex;
+  align-items: center;
 }
 
-/* Mobile content - hidden on desktop */
 .mobileContent {
   display: none;
 }
@@ -119,19 +120,34 @@
 
 .swipeGroup {
   width: 100%;
-  overflow: hidden;
-  touch-action: pan-y;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+
+.swipeGroup::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.swipeGroup::-webkit-scrollbar {
+  display: none;
 }
 
 .imageCarousel {
-  width: 100%;
-  overflow: hidden;
-}
-
-.imageTrack {
   display: flex;
-  transition: transform 0.3s ease-in-out;
   gap: 10px;
+  width: max-content;
 }
 
 .imageSlide {
@@ -247,6 +263,17 @@
     display: block;
     width: 100%;
     margin-top: 15px;
+  }
+
+  .topTextSection {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 15px;
+  }
+
+  .topText {
+    width: 100%;
+    font-size: 18px;
   }
 
   .groupImage {

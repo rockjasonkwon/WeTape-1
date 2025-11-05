@@ -5,19 +5,23 @@
 }
 
 .redBanner {
-  background-color: #db2a1ae6;
+  background-color: rgba(219, 41, 26, 0.9);
   width: 100%;
   margin: 0 auto;
-  padding: 40px 10px 40px 80px;
-  position: relative;
+  padding: 40px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1;
 }
 
 .bannerContent {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
 }
 
 .bannerTitle {
@@ -42,11 +46,12 @@
 
 .heroImage {
   width: 100%;
-  height: 600px;
+  height: 879px;
   background-image: url("/assets/about/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .infoSection {
@@ -140,6 +145,8 @@
 @media (max-width: 1200px) {
   .redBanner {
     padding: 40px 50px;
+    position: absolute;
+    top: 0;
   }
 
   .bannerTitle {
@@ -151,7 +158,20 @@
   }
 
   .heroImage {
-    height: 500px;
+    height: 700px;
+    position: relative;
+  }
+}
+
+@media (max-width: 1024px) {
+  .redBanner {
+    position: relative;
+    top: auto;
+    padding: 35px 40px;
+  }
+
+  .heroImage {
+    height: 600px;
   }
 
   .infoSection {
@@ -183,6 +203,8 @@
   .redBanner {
     width: 100%;
     padding: 30px;
+    position: relative;
+    top: auto;
   }
 
   .bannerContent {
@@ -201,8 +223,9 @@
   }
 
   .heroImage {
-    height: 400px;
+    height: 500px;
     background-image: url("/assets/about/mobile/wetape.png");
+    position: relative;
   }
 
   .infoSection {
@@ -227,21 +250,28 @@
   }
 
   .certificationLogos {
-    justify-content: center;
-    gap: 15px;
+    justify-content: flex-start;
+    gap: 13px;
     flex-wrap: nowrap;
+    width: 100%;
   }
 
   .logoLarge {
-    height: 50px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
     max-width: 100%;
+    object-fit: contain;
   }
 
   .logoSmall {
-    height: 40px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
     max-width: 100%;
+    object-fit: contain;
   }
 
   .mainContent {

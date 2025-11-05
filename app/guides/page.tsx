@@ -40,16 +40,18 @@ export default function Guides() {
               sx={{
                 fontFamily: '"Lato", sans-serif',
                 fontSize: "24px",
-                fontWeight: 600,
+                fontWeight: 700,
                 textTransform: "none",
-                color: value === 0 ? "#2A2322" : "#919191",
+                lineHeight: "35px",
+                letterSpacing: "-0.01em",
+                color: value === 0 ? "rgb(42, 35, 34)" : "#919191",
                 "&.Mui-selected": {
-                  color: "#2A2322",
+                  color: "rgb(42, 35, 34)",
                   fontWeight: 700,
                 },
                 minWidth: "auto",
                 padding: "0 20px",
-                marginRight: "20px",
+                marginRight: "30px",
               }}
             />
             <Tab
@@ -58,11 +60,13 @@ export default function Guides() {
               sx={{
                 fontFamily: '"Lato", sans-serif',
                 fontSize: "24px",
-                fontWeight: 600,
+                fontWeight: 700,
                 textTransform: "none",
-                color: value === 1 ? "#2A2322" : "#919191",
+                lineHeight: "35px",
+                letterSpacing: "-0.01em",
+                color: value === 1 ? "rgb(42, 35, 34)" : "#919191",
                 "&.Mui-selected": {
-                  color: "#2A2322",
+                  color: "rgb(42, 35, 34)",
                   fontWeight: 700,
                 },
                 minWidth: "auto",

@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, TouchEvent } from "react";
+import React from "react";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import styles from "./internationalseminar.module.css";
 
 interface SwipeGroupProps {
@@ -9,58 +10,20 @@ interface SwipeGroupProps {
 }
 
 function SwipeGroup({ images, groupIndex }: SwipeGroupProps) {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
-
-  const handleTouchStart = (e: TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
-
-    if (isLeftSwipe && currentImage < images.length - 1) {
-      setCurrentImage(currentImage + 1);
-    }
-    if (isRightSwipe && currentImage > 0) {
-      setCurrentImage(currentImage - 1);
-    }
-
-    setTouchStart(0);
-    setTouchEnd(0);
-  };
-
   return (
-    <div
-      className={styles.swipeGroup}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
+    <div className={styles.swipeGroup}>
       <div className={styles.imageCarousel}>
-        <div
-          className={styles.imageTrack}
-          style={{ transform: `translateX(-${currentImage * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className={styles.imageSlide}>
-              <img
-                src={image}
-                alt={`Seminar ${groupIndex + 1}-${index + 1}`}
-                className={groupIndex === 2 ? styles.group3Image : styles.groupImage}
-              />
-            </div>
-          ))}
-        </div>
+        {images.map((image, index) => (
+          <div key={index} className={styles.imageSlide}>
+            <img
+              src={image}
+              alt={`Seminar ${groupIndex + 1}-${index + 1}`}
+              className={
+                groupIndex === 2 ? styles.group3Image : styles.groupImage
+              }
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -82,10 +45,7 @@ export default function InternationalSeminarPage() {
       "/assets/about/slide/2-3.png",
     ],
     // Third group - 2 images
-    [
-      "/assets/about/slide/3-1.png",
-      "/assets/about/slide/3-2.png",
-    ],
+    ["/assets/about/slide/3-1.png", "/assets/about/slide/3-2.png"],
   ];
 
   return (
@@ -129,7 +89,9 @@ export default function InternationalSeminarPage() {
           <div className={styles.contactInfo}>
             <p>Tel. +82 70 4711 7900 | Fax. +82 31 662 1007</p>
             <p>Email. info@bbtape.com | Website. https://bbtape.com</p>
-            <p>Address. 318 Jinwi-ro, Jinwi, Pyeongtaek-si, Gyeonggi-do, Korea</p>
+            <p>
+              Address. 318 Jinwi-ro, Jinwi, Pyeongtaek-si, Gyeonggi-do, Korea
+            </p>
           </div>
         </div>
       </div>
@@ -139,10 +101,9 @@ export default function InternationalSeminarPage() {
           href="http://balancetaping.net/"
           target="_blank"
           rel="noopener noreferrer"
-          className={styles.registerButton}
-        >
+          className={styles.registerButton}>
           Register For The Seminar
-          <span className={styles.arrow}>›</span>
+          <ChevronRightIcon className={styles.arrow} />
         </a>
       </div>
     </div>

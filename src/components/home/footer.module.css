@@ -10,7 +10,7 @@
 
 .socialIcons {
   display: flex;
-  gap: 30px;
+  gap: 54px;
   margin-bottom: 40px;
 }
 
@@ -76,7 +76,7 @@
   }
 
   .socialIcons {
-    gap: 20px;
+    gap: 34px;
   }
 
   .iconLink {

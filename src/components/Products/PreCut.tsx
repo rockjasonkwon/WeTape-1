@@ -4,15 +4,15 @@ import styles from "./precut.module.css";
 export default function PreCutPage() {
   return (
     <div>
-      <div className={styles.redBanner}>
-        <div className={styles.bannerContent}>
-          <h1 className={styles.bannerTitle}>Pre-cut</h1>
-        </div>
-      </div>
-
       <div className={styles.contentSection}>
         <div className={styles.mainContent}>
           <div className={styles.imageColumn}>
+            <div className={styles.redBanner}>
+              <div className={styles.bannerContent}>
+                <h1 className={styles.bannerTitle}>Pre-cut</h1>
+              </div>
+            </div>
+
             <img
               src="/assets/product/pre.png"
               alt="Pre-cut Tapes"

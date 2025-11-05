@@ -29,7 +29,7 @@ export default function Navbar({
   activeChildLink,
 }: NavbarProps) {
   const pathname = usePathname();
-  const [activeHash, setActiveHash] = useState<string>("");
+  const [activeHash, setActiveHash] = useState<string>(activeChildLink || "");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -70,6 +70,13 @@ export default function Navbar({
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Sync activeHash with activeChildLink prop
+  useEffect(() => {
+    if (activeChildLink) {
+      setActiveHash(activeChildLink);
+    }
+  }, [activeChildLink]);
+
   const isChildActive = (href: string) => {
     // If mobile and activeChildLink prop is provided, use it (mobile tab mode)
     if (isMobile && activeChildLink !== undefined) {
@@ -103,15 +110,18 @@ export default function Navbar({
 
       if (targetElement) {
         // Dynamically calculate the navbar height
-        const navbarWrapper = document.querySelector(`.${styles.navbarWrapper}`) as HTMLElement;
+        const navbarWrapper = document.querySelector(
+          `.${styles.navbarWrapper}`
+        ) as HTMLElement;
         const navbarHeight = navbarWrapper ? navbarWrapper.offsetHeight : 150;
 
         const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navbarHeight;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
     } else {
@@ -123,7 +133,9 @@ export default function Navbar({
     <div className={styles.navbarWrapper}>
       <nav className={styles.navbar}>
         <button
-          className={`${styles.hamburger} ${isMobileMenuOpen ? styles.open : ''}`}
+          className={`${styles.hamburger} ${
+            isMobileMenuOpen ? styles.open : ""
+          }`}
           onClick={toggleMobileMenu}
           aria-label="Toggle menu">
           <span className={styles.hamburgerLine}></span>
@@ -183,7 +195,10 @@ export default function Navbar({
       </nav>
 
       {/* Mobile Menu */}
-      <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+      <div
+        className={`${styles.mobileMenu} ${
+          isMobileMenuOpen ? styles.mobileMenuOpen : ""
+        }`}>
         <ul className={styles.mobileNavList}>
           <li className={styles.mobileNavItem}>
             <Link
@@ -230,10 +245,7 @@ export default function Navbar({
 
       {/* Overlay */}
       {isMobileMenuOpen && (
-        <div
-          className={styles.overlay}
-          onClick={closeMobileMenu}
-        />
+        <div className={styles.overlay} onClick={closeMobileMenu} />
       )}
 
       {(pageTitle ||

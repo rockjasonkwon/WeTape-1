@@ -33,7 +33,7 @@
 
 .title {
   font-family: "Lato", sans-serif;
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
@@ -50,7 +50,7 @@
 
 .text {
   font-family: "Lato", sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 400;
   color: #ffffff;
   margin: 0;
@@ -58,37 +58,40 @@
   line-height: 1.5;
 }
 
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 60px;
-}
-
 .furtherButton {
-  background-color: rgba(42, 35, 34, 0.9);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 140px;
+  background-color: rgb(42, 35, 34);
   color: #ffffff;
   font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 18px 40px;
+  font-size: 30px;
+  font-weight: 700;
+  padding: 20px 50px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 15px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  z-index: 1000;
 }
 
 .furtherButton:hover {
-  background-color: rgba(42, 35, 34, 1);
-  transform: translateY(-2px);
+  background-color: rgba(42, 35, 34, 0.8);
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 20px rgba(42, 35, 34, 0.4);
+}
+
+.furtherButton:active {
+  transform: translateX(-50%) translateY(0);
 }
 
 .arrow {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 48px !important;
 }
 
 .useCaseImageSection {
@@ -97,10 +100,71 @@
   margin-bottom: 160px;
 }
 
-.useCaseImage {
+/* Grid: 2 columns, custom gaps */
+.useCaseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 48px; /* horizontal gap */
+  row-gap: 54px; /* vertical gap */
+}
+
+/* Card + hover overlay */
+.useCaseCard {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.useCaseItem {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.useCaseOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65); /* dark veil on hover */
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.useCaseCaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 32px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Hover / focus show overlay + title */
+.useCaseCard:hover .useCaseOverlay,
+.useCaseCard:focus-visible .useCaseOverlay {
+  opacity: 1;
+}
+.useCaseCard:hover .useCaseCaption,
+.useCaseCard:focus-visible .useCaseCaption {
+  opacity: 1;
+}
+.useCaseCard:hover .useCaseItem,
+.useCaseCard:focus-visible .useCaseItem {
+  transform: scale(1.03);
 }
 
 /* Tablet responsiveness (768px - 1024px) */
@@ -122,12 +186,13 @@
   }
 
   .furtherButton {
-    font-size: 18px;
-    padding: 16px 35px;
+    font-size: 24px;
+    padding: 18px 45px;
+    bottom: 100px;
   }
 
-  .buttonContainer {
-    padding-bottom: 50px;
+  .arrow {
+    font-size: 36px !important;
   }
 
   .useCaseImageSection {
@@ -163,17 +228,26 @@
   }
 
   .furtherButton {
-    font-size: 16px;
-    padding: 14px 30px;
+    font-size: 20px;
+    padding: 16px 35px;
+    bottom: 80px;
   }
 
-  .buttonContainer {
-    padding-bottom: 40px;
+  .arrow {
+    font-size: 28px !important;
   }
 
   .useCaseImageSection {
     margin-top: 80px;
     margin-bottom: 80px;
+  }
+  .useCaseGrid {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .useCaseItem {
+    width: 100%;
   }
 }
 
@@ -197,17 +271,13 @@
   }
 
   .furtherButton {
-    font-size: 14px;
-    padding: 12px 25px;
-    gap: 10px;
+    font-size: 18px;
+    padding: 14px 30px;
+    bottom: 60px;
   }
 
   .arrow {
-    font-size: 20px;
-  }
-
-  .buttonContainer {
-    padding-bottom: 30px;
+    font-size: 24px !important;
   }
 
   .useCaseImageSection {

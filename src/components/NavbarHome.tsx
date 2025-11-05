@@ -43,7 +43,7 @@ export default function NavbarHome() {
 
         <Link href="/" className={styles.logo}>
           <Image
-            src="/assets/home/logo2.svg"
+            src="/assets/home/logo.svg"
             alt="WE tape"
             width={180}
             height={60}

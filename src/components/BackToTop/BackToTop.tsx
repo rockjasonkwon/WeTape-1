@@ -49,7 +49,11 @@ export default function BackToTop({ backgroundColor = "rgb(219, 41, 26)" }: Back
             ["--hover-bg-color" as string]: hoverColor,
           }}
         >
-          <span className={styles.arrow}>↑</span>
+          <span className={styles.arrow}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" fill="none" viewBox="0 0 17 15">
+              <path fill="#fff" d="M0 14.637 8.463 0l8.442 14.637z"/>
+            </svg>
+          </span>
           <span className={styles.text}>TOP</span>
         </button>
       )}

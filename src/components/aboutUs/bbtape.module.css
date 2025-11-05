@@ -2,12 +2,14 @@
   background-color: #db2a1ae6;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 10px 40px 80px;
+  padding: 40px 0;
   position: relative;
   z-index: 1;
 }
 
 .bannerContent {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;

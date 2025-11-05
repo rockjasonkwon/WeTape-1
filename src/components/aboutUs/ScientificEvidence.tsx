@@ -1,4 +1,5 @@
 import React from "react";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import styles from "./scientificevidence.module.css";
 
 export default function ScientificEvidencePage() {
@@ -8,6 +9,9 @@ export default function ScientificEvidencePage() {
       <div className={styles.redBanner}>
         <div className={styles.bannerContent}>
           <h1 className={styles.bannerTitle}>Scientific Evidence</h1>
+          <p className={styles.bannerSubtitle}>
+            Scientific evidence with BB-TAPE
+          </p>
         </div>
       </div>
 
@@ -49,12 +53,6 @@ export default function ScientificEvidencePage() {
                 <p className={styles.detailItem}>- PMCID: PMC7712549.</p>
               </div>
             </div>
-
-            <p className={styles.footnote}>
-              <span className={styles.footnoteHighlight}>* FAOS :</span> 5
-              subscales to access foot and ankle pain, symptoms, and function in
-              general activities, sport, and recreation
-            </p>
           </div>
 
           {/* Right Column - Chart */}
@@ -66,9 +64,14 @@ export default function ScientificEvidencePage() {
             />
           </div>
         </div>
+        <p className={styles.footnote}>
+          <span className={styles.footnoteHighlight}>* FAOS :</span> 5 subscales
+          to access foot and ankle pain, symptoms, and function in general
+          activities, sport, and recreation
+        </p>
       </div>
 
-      <div className={styles.contentSection}>
+      <div className={styles.contentSection2}>
         <div className={styles.mainContent}>
           {/* Left Column */}
           <div className={styles.leftColumn}>
@@ -79,7 +82,7 @@ export default function ScientificEvidencePage() {
             </h2>
 
             <div className={styles.highlightBox}>
-              <p className={styles.highlightText}>
+              <p className={styles.highlightText2}>
                 Change Variable After Intervention Of Quadriceps Muscle Peak
                 Torque With BB TAPE
               </p>
@@ -120,7 +123,10 @@ export default function ScientificEvidencePage() {
       <div className={styles.historySection}>
         <h2 className={styles.historyTitle}>JOURNAL AND PUBLICATION HISTORY</h2>
         <picture>
-          <source media="(max-width: 768px)" srcSet="/assets/about/mobile/journal.png" />
+          <source
+            media="(max-width: 768px)"
+            srcSet="/assets/about/mobile/journal.png"
+          />
           <img
             src="/assets/about/journal.png"
             alt="Journal and Publication History"
@@ -128,10 +134,12 @@ export default function ScientificEvidencePage() {
           />
         </picture>
         <div className={styles.buttonSection}>
-          <button className={styles.evidenceButton}>
+          <a
+            href="#"
+            className={styles.evidenceButton}>
             Check Out Further Evidences
-            <span className={styles.arrow}>›</span>
-          </button>
+            <ChevronRightIcon className={styles.arrow} />
+          </a>
         </div>
       </div>
     </div>

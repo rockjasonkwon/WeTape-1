@@ -39,9 +39,11 @@
 
 .imageColumn {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  position: relative;
 }
 
 .productImage {
@@ -64,52 +66,55 @@
 
 .infoTitle {
   font-family: "Lato", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
   color: #db2a1ae6;
   margin: 0 0 15px 0;
 }
 
 .infoText {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
-  color: #333;
+  color: #2a2322;
   line-height: 1.6;
   margin: 0;
+  letter-spacing: -1%;
 }
 
-.buttonSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.mobileBreak {
+  display: none;
 }
 
 .shopButton {
-  background-color: #db2a1ae6;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 140px;
+  background-color: rgb(219, 41, 26);
   color: white;
   font-family: "Lato", sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 700;
-  padding: 20px 60px;
+  padding: 20px 50px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
   transition: all 0.3s ease;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(219, 42, 26, 0.3);
+  z-index: 1000;
 }
 
 .shopButton:hover {
   background-color: #c0241a;
-  transform: translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
   box-shadow: 0 6px 20px rgba(219, 42, 26, 0.4);
 }
 
 .shopButton:active {
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 .collectionSection {
@@ -152,14 +157,10 @@
     font-size: 16px;
   }
 
-  .buttonSection {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-
   .shopButton {
-    font-size: 20px;
-    padding: 18px 50px;
+    font-size: 24px;
+    padding: 18px 45px;
+    bottom: 100px;
   }
 
   .collectionSection {
@@ -169,8 +170,17 @@
 
 /* Mobile responsiveness (up to 768px) */
 @media (max-width: 768px) {
+  .imageColumn {
+    position: relative;
+  }
+
   .redBanner {
     padding: 25px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
   }
 
   .bannerContent {
@@ -208,14 +218,14 @@
     font-size: 15px;
   }
 
-  .buttonSection {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .mobileBreak {
+    display: block;
   }
 
   .shopButton {
-    font-size: 18px;
-    padding: 16px 40px;
+    font-size: 20px;
+    padding: 16px 35px;
+    bottom: 80px;
   }
 
   .collectionSection {
@@ -246,14 +256,14 @@
     font-size: 14px;
   }
 
-  .buttonSection {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  .mobileBreak {
+    display: block;
   }
 
   .shopButton {
-    font-size: 16px;
-    padding: 14px 35px;
+    font-size: 18px;
+    padding: 14px 30px;
+    bottom: 60px;
   }
 
   .collectionSection {

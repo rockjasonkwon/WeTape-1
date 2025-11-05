@@ -38,6 +38,7 @@
 }
 
 .imageColumn {
+  flex-direction: column;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -128,7 +129,16 @@
 
 /* Mobile responsiveness (up to 768px) */
 @media (max-width: 768px) {
+  .imageColumn {
+    position: relative;
+  }
+
   .redBanner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
     padding: 25px 20px;
   }
 

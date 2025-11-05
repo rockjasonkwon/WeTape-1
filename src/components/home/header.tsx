@@ -1,4 +1,4 @@
-import styles from './header.module.css';
+import styles from "./header.module.css";
 
 export default function Header() {
   return (
@@ -6,8 +6,13 @@ export default function Header() {
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            THE WORLD&apos;S<br />
-            BEST KINESIOLOGY TAPE
+            The World&apos;s
+            <br className={styles.heroBreak1} />
+            Best
+            <br className={styles.heroBreak2} />
+            Kinesiology
+            <br className={styles.heroBreak3} />
+            Tape
           </h1>
         </div>
       </div>
