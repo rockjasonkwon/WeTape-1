@@ -9,11 +9,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 40px 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
 }
 
 .bannerContent {
@@ -164,6 +159,19 @@
 }
 
 @media (max-width: 1024px) {
+  #wetape-inc {
+    padding-top: 180px;
+  }
+
+  #wetape-inc,
+  #processes,
+  #global-network,
+  #bb-tape,
+  #international-seminar,
+  #scientific-evidence {
+    scroll-margin-top: 180px;
+  }
+
   .redBanner {
     position: relative;
     top: auto;
@@ -200,6 +208,19 @@
 }
 
 @media (max-width: 768px) {
+  #wetape-inc {
+    padding-top: 160px;
+  }
+
+  #wetape-inc,
+  #processes,
+  #global-network,
+  #bb-tape,
+  #international-seminar,
+  #scientific-evidence {
+    scroll-margin-top: 160px;
+  }
+
   .redBanner {
     width: 100%;
     padding: 30px;
