@@ -8,7 +8,7 @@ export default function Header() {
           <h1 className={styles.heroTitle}>
             The World&apos;s
             <br className={styles.heroBreak1} />
-            Best
+            Best&nbsp;
             <br className={styles.heroBreak2} />
             Kinesiology
             <br className={styles.heroBreak3} />

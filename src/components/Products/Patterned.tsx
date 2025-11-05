@@ -4,18 +4,18 @@ import styles from "./patterned.module.css";
 export default function PatternedPage() {
   return (
     <div>
+      {/* Red Banner */}
+      <div className={styles.redBanner}>
+        <div className={styles.bannerContent}>
+          <h1 className={styles.bannerTitle}>Patterned</h1>
+        </div>
+      </div>
+
       {/* Content Section */}
       <div className={styles.contentSection}>
         <div className={styles.mainContent}>
           {/* Left Column - Image */}
           <div className={styles.imageColumn}>
-            {/* Red Banner */}
-            <div className={styles.redBanner}>
-              <div className={styles.bannerContent}>
-                <h1 className={styles.bannerTitle}>Patterned</h1>
-              </div>
-            </div>
-
             <img
               src="/assets/product/patterned.png"
               alt="Patterned Tapes"

@@ -32,6 +32,7 @@ export default function Guides() {
                 backgroundColor: "#db2a1ae6",
                 height: "3px",
                 bottom: 0,
+                zIndex: 99,
               },
             }}>
             <Tab

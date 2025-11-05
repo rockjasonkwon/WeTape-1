@@ -4,18 +4,18 @@ import styles from "./coolhot.module.css";
 export default function CoolHotPage() {
   return (
     <div>
+      {/* Red Banner */}
+      <div className={styles.redBanner}>
+        <div className={styles.bannerContent}>
+          <h1 className={styles.bannerTitle}>Cool/Hot</h1>
+        </div>
+      </div>
+
       {/* Content Section */}
       <div className={styles.contentSection}>
         <div className={styles.mainContent}>
           {/* Left Column - Image */}
           <div className={styles.imageColumn}>
-            {/* Red Banner */}
-            <div className={styles.redBanner}>
-              <div className={styles.bannerContent}>
-                <h1 className={styles.bannerTitle}>Cool/Hot</h1>
-              </div>
-            </div>
-
             <img
               src="/assets/product/cool.png"
               alt="Cool/Hot Tapes"

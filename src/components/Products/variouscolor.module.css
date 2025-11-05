@@ -37,14 +37,6 @@
   align-items: start;
 }
 
-.imageColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%;
-  position: relative;
-}
 
 .productImage {
   width: 100%;
@@ -170,17 +162,10 @@
 
 /* Mobile responsiveness (up to 768px) */
 @media (max-width: 768px) {
-  .imageColumn {
-    position: relative;
-  }
 
   .redBanner {
     padding: 25px 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 2;
   }
 
   .bannerContent {
@@ -235,9 +220,6 @@
 
 /* Small mobile devices (up to 480px) */
 @media (max-width: 480px) {
-  .redBanner {
-    padding: 20px 15px;
-  }
 
   .bannerTitle {
     font-size: 32px;

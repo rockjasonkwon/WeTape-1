@@ -17,6 +17,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
+  overflow: visible;
 }
 
 .pageTitle {
@@ -31,7 +32,23 @@
 .customTabs {
   min-height: auto !important;
   position: relative;
-  border-bottom: 1px solid #919191;
+  overflow: visible;
+}
+
+.customTabs::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #919191;
+  z-index: 0;
+}
+
+.customTabs .MuiTabs-indicator {
+  z-index: 2 !important;
+  position: relative !important;
 }
 
 .customTab {
