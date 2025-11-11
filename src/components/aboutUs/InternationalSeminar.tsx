@@ -28,9 +28,7 @@ function SwipeGroup({ images, groupIndex, title }: SwipeGroupProps) {
           ))}
         </div>
       </div>
-      <div className={styles.carouselTitle}>
-        {title}
-      </div>
+      <div className={styles.carouselTitle}>{title}</div>
     </div>
   );
 }
@@ -115,7 +113,7 @@ export default function InternationalSeminarPage() {
 
       <div className={styles.buttonSection}>
         <a
-          href="https://bbtape.com/research.php"
+          href="http://balancetaping.net/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.registerButton}>
