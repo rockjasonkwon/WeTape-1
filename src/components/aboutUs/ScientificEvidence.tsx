@@ -135,7 +135,7 @@ export default function ScientificEvidencePage() {
         </picture>
         <div className={styles.buttonSection}>
           <a
-            href="#"
+            href="https://bbtape.com/research.php"
             className={styles.evidenceButton}>
             Check Out Further Evidences
             <ChevronRightIcon className={styles.arrow} />
