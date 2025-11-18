@@ -136,7 +136,9 @@ export default function ScientificEvidencePage() {
         <div className={styles.buttonSection}>
           <a
             href="https://bbtape.com/research.php"
-            className={styles.evidenceButton}>
+            className={styles.evidenceButton}
+            target="_blank"
+            rel="noopener noreferrer">
             Check Out Further Evidences
             <ChevronRightIcon className={styles.arrow} />
           </a>
